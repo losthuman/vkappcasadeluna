@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Panel, ListItem, Button, Group, Div, Avatar, PanelHeader } from '@vkontakte/vkui';
-import 'bootstrap/dist/css/bootstrap.css'
-
+// import 'bootstrap/dist/css/bootstrap.css'
+// import '../components/table.sass';
 
 const Home = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
-		<PanelHeader>Casa de Luna | Estudio Flamenco</PanelHeader>
+		<PanelHeader>Casa de luna | Estudio Flamenco</PanelHeader>
 		{fetchedUser &&
-		<Group title="">
+		<Group title="Информация">
 			<ListItem
 				before={fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200}/> : null}
 				description={fetchedUser.city && fetchedUser.city.title ? fetchedUser.city.title : ''}
@@ -17,18 +17,13 @@ const Home = ({ id, go, fetchedUser }) => (
 			</ListItem>
 		</Group>}
 
-		{/* <Group title="Информация"> */}
-			{/* <Div>
-				<Button size="xl" level="2" onClick={go} data-to="persik">
-					Show me the Persik, please
-				</Button>
-			</Div> */}
+		<Group title="Сервисы">
 			<Div className='text-center'>
 				<Button className='btn btn-secondary btn-lg'  level="primary" onClick={go} data-to="mypanel">
 					Расписание занятий
 				</Button>
 			</Div>
-		{/* </Group> */}
+		</Group>
 	</Panel>
 );
 

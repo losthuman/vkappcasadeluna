@@ -1,7 +1,8 @@
 import  React  from "react";
 import { Div } from "@vkontakte/vkui";
-import 'bootstrap/dist/css/bootstrap.css';
+
 import './table.sass';
+import '@vkontakte/vkui/dist/vkui.css';
 // import Header from '../components/header';
 // import Row from '../components/row';
 
@@ -10,8 +11,6 @@ import './table.sass';
 
 class Table extends React.Component {
     
-
-
     render(){
         return (
             <Div className=''>

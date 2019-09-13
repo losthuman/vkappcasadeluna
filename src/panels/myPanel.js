@@ -10,12 +10,10 @@ const osname = platform();
 const MyPanel = (props) => (
     <Panel id={props.id}>
         <PanelHeader 
-			left={<HeaderButton onClick={props.go} data-to="home" className='panel'>
+			left={<HeaderButton onClick={props.go} data-to="home">
 				{osname === IOS ? <Icon28ChevronBack/> : <Icon24Back/>}
 			</HeaderButton>}
-		>
-			Расписание занятий
-		</PanelHeader>
+		>Расписание занятий</PanelHeader>
         <Table />
     </Panel>
 );
