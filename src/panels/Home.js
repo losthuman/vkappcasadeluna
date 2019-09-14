@@ -4,9 +4,9 @@ import { Panel, ListItem, Button, Group, Div, Avatar, PanelHeader } from '@vkont
 
 const Home = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
-		<PanelHeader>Casa de luna | Estudio Flamenco</PanelHeader>
+		<PanelHeader>Casa de Luna | Estudio Flamenco</PanelHeader>
 		{fetchedUser &&
-		<Group title="Здравствуйте!">
+		<Group title="Здравствуйте,">
 			<ListItem
 				before={fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200}/> : null}
 				description={fetchedUser.city && fetchedUser.city.title ? fetchedUser.city.title : ''}
@@ -15,7 +15,7 @@ const Home = ({ id, go, fetchedUser }) => (
 			</ListItem>
 		</Group>}
 
-		<Group title="информация и сервисы">
+		<Group title="">
 			<Div>
 				<Button className='btn btn-outline-secondary btn-lg text-uppercase'  level="primary" onClick={go} data-to="schedule">
 					Расписание занятий
