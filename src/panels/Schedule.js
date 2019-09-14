@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import { Panel, PanelHeader, HeaderButton, platform, IOS } from '@vkontakte/vkui';
 import Icon28ChevronBack from '@vkontakte/icons/dist/28/chevron_back';
 import Icon24Back from '@vkontakte/icons/dist/24/back';
-import Table from '../components/table';
+import {Table} from '../components/table';
 
 const osname = platform();
 
-const MyPanel = (props) => (
+const Schedule = (props) => (
     <Panel id={props.id}>
         <PanelHeader 
 			left={<HeaderButton onClick={props.go} data-to="home">
@@ -18,9 +18,9 @@ const MyPanel = (props) => (
     </Panel>
 );
 
-MyPanel.propTypes = {
+Schedule.propTypes = {
 	id: PropTypes.string.isRequired,
 	go: PropTypes.func.isRequired,
 };
 
-export default MyPanel;
+export default Schedule;

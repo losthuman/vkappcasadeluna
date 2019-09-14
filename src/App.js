@@ -4,8 +4,8 @@ import { View } from '@vkontakte/vkui';
 import '@vkontakte/vkui/dist/vkui.css';
 
 import Home from './panels/Home';
-import Persik from './panels/Persik';
-import MyPanel from './panels/myPanel';
+import Schedule from './panels/Schedule';
+import Price from './panels/Price';
 
 class App extends React.Component {
 	constructor(props) {
@@ -39,8 +39,8 @@ class App extends React.Component {
 		return (
 			<View activePanel={this.state.activePanel}>
 				<Home id="home" fetchedUser={this.state.fetchedUser} go={this.go} />
-				<Persik id="persik" go={this.go} />
-				<MyPanel id="mypanel" go={this.go}/>
+				<Schedule id="schedule" go={this.go}/>
+				<Price id="price" go={this.go}/>
 			</View>
 		);
 	}
