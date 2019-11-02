@@ -13,7 +13,7 @@ class App extends React.Component {
 
 		this.state = {
 			activePanel: 'home',
-			fetchedUser: null,
+			fetchedUser: null
 		};
 	}
 
@@ -21,14 +21,13 @@ class App extends React.Component {
 		connect.subscribe((e) => {
 			switch (e.detail.type) {
 				case 'VKWebAppGetUserInfoResult':
-					this.setState({ fetchedUser: e.detail.data });
+					this.setState({ fetchedUser: e.detail.data });					
 					break;
 				default:
 					console.log(e.detail.type);
 			}
 		});
 		connect.send('VKWebAppGetUserInfo', {});
-	
 	}
 
 	go = (e) => {

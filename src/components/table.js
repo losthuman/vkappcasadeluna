@@ -11,24 +11,19 @@ import '@vkontakte/vkui/dist/vkui.css';
 
 
 export const Table = () => {    
-
         return (
-            <Div className=''>
+            <Div>
                 <table className='m-auto table w-auto table-bordered tbl'>
                     {
-                        schedule["week"].map((day, i) =>
-                            <React.Fragment key={i}>
+                        schedule["week"].map(day =>
+                            <React.Fragment key={day.id}>
                                 <Thead name={day["name"]} />
                                 <tbody >
                                     <Trow rows={day["schedule"]}/>
                                 </tbody>
-                            </React.Fragment>
-                        )
+                            </React.Fragment>)
                     } 
-                </table> 
-            
+                </table>
             </Div>
         );
 }
-
-// export default Table;

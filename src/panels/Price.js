@@ -7,10 +7,10 @@ import "../components/table.sass";
 
 const osname = platform();
 
-const Price = (props) => (
-    <Panel id={props.id}>
+const Price = ({id, go}) => (
+    <Panel id={id}>
         <PanelHeader 
-			left={<HeaderButton onClick={props.go} data-to="home">
+			left={<HeaderButton onClick={go} data-to="home">
 				{osname === IOS ? <Icon28ChevronBack/> : <Icon24Back/>}
 			</HeaderButton>}
 		>Цены обучения</PanelHeader>
