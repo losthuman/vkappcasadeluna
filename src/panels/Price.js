@@ -1,6 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { Panel, PanelHeader, HeaderButton, Div, platform, IOS } from '@vkontakte/vkui';
+import { Panel, PanelHeader, HeaderButton, List, Cell, InfoRow, Group, platform, IOS } from '@vkontakte/vkui';
 import Icon28ChevronBack from '@vkontakte/icons/dist/28/chevron_back';
 import Icon24Back from '@vkontakte/icons/dist/24/back';
 import "../components/table.sass";
@@ -14,29 +13,39 @@ const Price = ({id, go}) => (
 				{osname === IOS ? <Icon28ChevronBack/> : <Icon24Back/>}
 			</HeaderButton>}
 		>Цены обучения</PanelHeader>
-        <Div>
-			
-			<h4>Стоимость абонемента (утро): </h4>
-				<ul>
-					<li>На 4 занятия - 1200 руб</li>
-					<li>На 8 занятий - 2000 руб</li>
-					<li>Разовое занятие - 300 руб</li>
-				</ul>
-			<h4>Стоимость абонемента (вечер):</h4>
-				<ul>
-					<li>На 4 занятия - 1300 руб</li>
-					<li>На 8 занятий - 2200 руб</li>
-					<li>На 12 занятий – 2900 руб</li>
-					<li>Разовое занятие - 350 руб</li>
-				</ul>
+		<Group title='Стоимость абонемента (утро):'>
+			<List>
+				<Cell>
+					<InfoRow>На 4 занятия - 1200 рублей</InfoRow>
+				</Cell>
+				<Cell>
+					<InfoRow>На 8 занятий - 2000 рублей</InfoRow>
+				</Cell>
+				<Cell>
+					<InfoRow>Разовое занятие - 300 рублей</InfoRow>
+				</Cell>
+			</List>
+		</Group>
 
-		</Div>
+		<Group title='Стоимость абонемента (вечер):'>
+			<List>
+				<Cell>
+					<InfoRow>На 4 занятия - 1300 рублей</InfoRow>
+				</Cell>
+				<Cell>
+					<InfoRow>На 8 занятий - 2200 рублей</InfoRow>
+				</Cell>
+				<Cell>
+					<InfoRow>На 12 занятий – 2900 рублей</InfoRow>
+				</Cell>
+				<Cell>
+					<InfoRow>Разовое занятие - 350 рублей</InfoRow>
+				</Cell>
+			</List>
+		</Group>
     </Panel>
 );
 
-Price.propTypes = {
-	id: PropTypes.string.isRequired,
-	go: PropTypes.func.isRequired,
-};
+
 
 export default Price;

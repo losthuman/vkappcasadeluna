@@ -6,6 +6,7 @@ import '@vkontakte/vkui/dist/vkui.css';
 import Home from './panels/Home';
 import Schedule from './panels/Schedule';
 import Price from './panels/Price';
+// import Metronome from "./panels/Metronome";
 
 class App extends React.Component {
 	constructor(props) {
@@ -24,7 +25,7 @@ class App extends React.Component {
 					this.setState({ fetchedUser: e.detail.data });					
 					break;
 				default:
-					console.log(e.detail.type);
+					// console.log(e.detail.type);
 			}
 		});
 		connect.send('VKWebAppGetUserInfo', {});
