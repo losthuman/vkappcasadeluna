@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Panel, ListItem, Button, Group, Div, Avatar, PanelHeader} from '@vkontakte/vkui';
+import '@vkontakte/vkui/dist/vkui.css';
 
 const Home = ({id, go, fetchedUser}) => (
     <Panel id={id}>
-        <PanelHeader> Casa de Luna | Estudio Flamenco</PanelHeader>
+        <PanelHeader>Casa de Luna | Estudio Flamenco</PanelHeader>
         {fetchedUser &&
         <Group title="Здравствуйте,">
             <ListItem
@@ -26,6 +27,12 @@ const Home = ({id, go, fetchedUser}) => (
                 <Button level="secondary" size="xl" onClick={go}
                         data-to="price">
                     Стоимость обучения
+                </Button>
+            </Div>
+            <Div>
+                <Button level="secondary" size="xl" onClick={go}
+                        data-to="metronome">
+                    Метроном
                 </Button>
             </Div>
 

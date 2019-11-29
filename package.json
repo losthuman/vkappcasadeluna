@@ -14,26 +14,26 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@babel/runtime": "^7.6.0",
+    "@babel/runtime": "^7.7.4",
     "cross-env": "^5.2.1",
     "gh-pages": "^2.1.1",
-    "react-hot-loader": "^4.12.12",
+    "react-hot-loader": "^4.12.18",
     "react-scripts": "^2.1.8"
   },
   "dependencies": {
-    "@vkontakte/icons": "^1.11.1",
-    "@vkontakte/vk-connect": "^1.5.5",
-    "@vkontakte/vkui": "^2.29.2",
+    "@vkontakte/icons": "^1.11.3",
+    "@vkontakte/vk-connect": "^1.6.10",
+    "@vkontakte/vkui": "^2.33.2",
     "@vkontakte/vkui-connect": "^1.5.4",
     "babel-eslint": "^9.0.0",
     "bootstrap": "^4.3.1",
-    "core-js": "^2.6.9",
+    "core-js": "^2.6.10",
     "howler": "^2.1.2",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.0",
     "prop-types": "^15.7.2",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "typescript": "^3.6.2"
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "typescript": "^3.7.2"
   },
   "browserslist": [
     ">0.2%",

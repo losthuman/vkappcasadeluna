@@ -1,12 +1,12 @@
 import React from 'react';
 import connect from '@vkontakte/vkui-connect';
 import { View } from '@vkontakte/vkui';
-import '@vkontakte/vkui/dist/vkui.css';
 
 import Home from './panels/Home';
 import Schedule from './panels/Schedule';
 import Price from './panels/Price';
-// import Metronome from "./panels/Metronome";
+import '@vkontakte/vkui/dist/vkui.css';
+import Metronome from "./panels/Metronome";
 
 class App extends React.Component {
 	constructor(props) {
@@ -41,6 +41,7 @@ class App extends React.Component {
 				<Home id="home" fetchedUser={this.state.fetchedUser} go={this.go} />
 				<Schedule id="schedule" go={this.go}/>
 				<Price id="price" go={this.go}/>
+				<Metronome id="metronome" go={this.go} />
 			</View>
 		);
 	}

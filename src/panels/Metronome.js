@@ -4,14 +4,12 @@ import PropTypes from 'prop-types';
 import { Panel, PanelHeader, HeaderButton, Input,FormLayout, Slider, Button, platform, IOS } from '@vkontakte/vkui';
 import Icon28ChevronBack from '@vkontakte/icons/dist/28/chevron_back';
 import Icon24Back from '@vkontakte/icons/dist/24/back';
-import Icon28Play from '@vkontakte/icons/dist/28/play';
 
+import './metronome.css';
 
 import ProMetronome from "../model/pro-metronome";
 import Icon48Play from '@vkontakte/icons/dist/48/play';
 import Icon48Pause from '@vkontakte/icons/dist/48/pause';
-import Dot from "../components/Dot";
-import Circle from "../components/Circle";
 
 
 class Metronome extends React.Component{
@@ -25,38 +23,34 @@ class Metronome extends React.Component{
 
     metronomeStyle = (props, state) => (
 
-        <div style={{marginTop: '2rem'}}>
+        <div className='wrapper'>
 
 
+            <Slider className='slider'
+                    max={300}
+                    min={0}
+                    step={1}
+                    defaultValue={this.state.bpm}
+                    value={this.state.bpm}
+                    onChange={(bpm) => this.setState({bpm})}
 
-            <FormLayout style={{textAlign: 'left', maxWidth: '150px', margin: '2rem', display: 'inline-block'}}
-                        >
+            />
+
+            <FormLayout >
                 <Input  top='Ударов в минуту :'
                         type='number'
                         alignment='center'
-                        size='100'
-                        defaultValue={String(this.state.bpm)}
+                        status='default'
                         value={this.state.bpm}
                         onFocus={()=>(this.setState({isPlaying: false}))}
                         onChange={(e)=>(this.setState({bpm: Number(e.target.value)}))}
 
                 />
             </FormLayout>
-
-            <Slider max={300}
-                    min={0}
-                    step={1}
-                    defaultValue={this.state.bpm}
-                    value={this.state.bpm}
-                    onChange={(bpm) => this.setState({bpm})}
-                    // style={{marginTop: '3rem'}}
-            />
-
-            <Button style={{margin: '3rem', display: 'inline-block'}}
-                    before={this.state.isPlaying ?  <Icon48Pause /> : <Icon48Play />}
+            <Button className='start-btn'
+                    before={this.state.isPlaying ?  <Icon48Pause style={{paddingLeft: '5px' }} /> : <Icon48Play style={{paddingLeft: '5px' }} />}
                     level='secondary'
                     onClick={()=>(this.setState({isPlaying: !this.state.isPlaying}))}>
-                {this.state.isPlaying ? 'Pause' : 'Start'}
             </Button>
             <div style={{height: '300px',
                         width: '300px',
@@ -98,8 +92,6 @@ class Metronome extends React.Component{
                 render={this.metronomeStyle}
                 isPlaying={this.state.isPlaying}
             />
-
-
 
         </Panel>
         );

@@ -4,6 +4,7 @@ import { Panel, PanelHeader, HeaderButton, platform, IOS } from '@vkontakte/vkui
 import Icon28ChevronBack from '@vkontakte/icons/dist/28/chevron_back';
 import Icon24Back from '@vkontakte/icons/dist/24/back';
 import {Table} from '../components/table';
+import '@vkontakte/vkui/dist/vkui.css';
 
 const osname = platform();
 
